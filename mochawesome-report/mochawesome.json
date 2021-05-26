@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-26T02:44:09.230Z",
+    "end": "2021-05-26T02:45:48.107Z",
+    "duration": 98877,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4e2aae60-0875-4033-b575-5952bddf2655",
+      "title": "",
+      "fullFile": "cypress/integration/examples/TestSuite.js",
+      "file": "cypress/integration/examples/TestSuite.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c156339f-d144-4ddb-aaf7-3adf954d3194",
+          "title": "Automated Test Suite For JupiterCloud",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate the Form.",
+              "fullTitle": "Automated Test Suite For JupiterCloud Validate the Form.",
+              "timedOut": null,
+              "duration": 19174,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('From the Home Page goto ContactPage.');\nhomePage.getContactTab().click();\ncontactPage.getContactPageMessage().should('have.contain.text', this.testdata.welcomemessage);\ncy.log('Click Submit button.');\ncontactPage.getSubmitButton().click();\ncy.log('Validate Errors.');\ncontactPage.getContactPageErrorMessage().should('have.contain.text', this.testdata.incompleteformmessage);\ncontactPage.getForenameErrorMessage().should('have.contain.text', this.testdata.fornamerequiredmessage);\ncontactPage.getEmailErrorMessage().should('have.contain.text', this.testdata.emailrequiredmessage);\ncontactPage.getMessageError().should('have.contain.text', this.testdata.messagerequired);\ncy.log('Populate Mandatory Fields.');\ncontactPage.getForenameField().type(this.testdata.name);\ncontactPage.getSurnameField().type(this.testdata.surname);\ncontactPage.getEmailField().type(this.testdata.email);\ncontactPage.getTelephoneField().type(this.testdata.phonenumber);\ncontactPage.getMessageField().type(this.testdata.testmessage);\ncy.log('Validate errors are gone.');\ncontactPage.getContactPageErrorMessage().should('not.exist');\ncontactPage.getForenameErrorMessage().should('not.exist');\ncontactPage.getEmailErrorMessage().should('not.exist');\ncontactPage.getMessageError().should('not.exist');",
+              "err": {},
+              "uuid": "e07ef481-5770-4523-b7d3-154c7aac3514",
+              "parentUUID": "c156339f-d144-4ddb-aaf7-3adf954d3194",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Submit Form multiple times.",
+              "fullTitle": "Automated Test Suite For JupiterCloud Submit Form multiple times.",
+              "timedOut": null,
+              "duration": 55704,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "for (var i = 0; i < 5; i++) {\n  cy.log('From the Home Page goto Contact Page.');\n  homePage.getContactTab().click();\n  contactPage.getContactPageMessage().should('have.contain.text', this.testdata.welcomemessage);\n  cy.log('Populate Mandatory Fields.');\n  contactPage.getForenameField().type(this.testdata.name, {\n    waitForAnimations: false\n  });\n  contactPage.getSurnameField().type(this.testdata.surname);\n  contactPage.getEmailField().type(this.testdata.email);\n  contactPage.getTelephoneField().type(this.testdata.phonenumber);\n  contactPage.getMessageField().type(this.testdata.testmessage);\n  cy.log('Click Submit button.');\n  contactPage.getSubmitButton().click();\n  cy.log('Validate successful Submission Messsage.');\n  contactPage.getSuccessMessage().should('have.contain.text', this.testdata.appreciatefeedbackmessage);\n  contactPage.getBackButton().click();\n}",
+              "err": {},
+              "uuid": "72318286-3fde-4ccc-a9b1-fb490d5baf0f",
+              "parentUUID": "c156339f-d144-4ddb-aaf7-3adf954d3194",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify items are in the cart",
+              "fullTitle": "Automated Test Suite For JupiterCloud Verify items are in the cart",
+              "timedOut": null,
+              "duration": 3862,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('From the Home Page goto Shop Page.');\nhomePage.getShopTab().click();\ncy.log(\"Click Buy button 2 times on 'Funny Cow'.\");\nshopPage.clickOnProduct(\"Funny Cow\", 2);\ncy.log(\"Click Buy button 1 time on 'Fluffy Bunny'.\");\nshopPage.clickOnProduct(\"Fluffy Bunny\", 1);\ncy.log(\"Click the cart Menu.\");\nhomePage.getCartTab().click();\ncy.log(\"Verify the items are in the Cart menu.\");\ncartPage.getCartMessage().should('have.contain.text', this.testdata.threeitemsinthecartmessage);\ncartPage.checkProductNameInTheCart(\"Funny Cow\");\ncartPage.checkProductNameInTheCart(\"Fluffy Bunny\");",
+              "err": {},
+              "uuid": "b06eff13-6c1e-42f4-a4b7-34c7fd7aff05",
+              "parentUUID": "c156339f-d144-4ddb-aaf7-3adf954d3194",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Total Amount",
+              "fullTitle": "Automated Test Suite For JupiterCloud Verify the Total Amount",
+              "timedOut": null,
+              "duration": 7409,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('From the Home Page goto Shop Page.');\nhomePage.getShopTab().click();\ncy.log(\"Click Buy button 2 times on 'Stuffed Frog'.\");\nshopPage.clickOnProduct(\"Stuffed Frog\", 2);\ncy.log(\"Click Buy button 5 time on 'Fluffy Bunny'.\");\nshopPage.clickOnProduct(\"Fluffy Bunny\", 5);\ncy.log(\"Click Buy button 3 time on 'Fluffy Bunny'.\");\nshopPage.clickOnProduct(\"Valentine Bear\", 3);\ncy.log(\"Click the cart Menu.\");\nhomePage.getCartTab().click();\ncartPage.checkProductNameInTheCart(\"Stuffed Frog\");\ncartPage.checkProductNameInTheCart(\"Fluffy Bunny\");\ncartPage.checkProductNameInTheCart(\"Valentine Bear\");\ncy.log(\"Verify the price of the each product.\");\ncartPage.verifyProductPrice(\"Stuffed Frog\", this.testdata.stuffedfrogprice);\ncartPage.verifyProductPrice(\"Fluffy Bunny\", this.testdata.fluffybunnyprice);\ncartPage.verifyProductPrice(\"Valentine Bear\", this.testdata.valentinebearprice);\ncy.log('Verify each products subtotal = product price * quantity');\ncartPage.checkProductSubtotal(\"Stuffed Frog\", this.testdata.stuffedfrogprice, 2);\ncartPage.checkProductSubtotal(\"Fluffy Bunny\", this.testdata.fluffybunnyprice, 5);\ncartPage.checkProductSubtotal(\"Valentine Bear\", this.testdata.valentinebearprice, 3);\ncy.log('Verify the Total = sum(sub Totals).');\ncartPage.verifyTotal();",
+              "err": {},
+              "uuid": "6d7650c9-7ed8-442e-890f-7838914b4994",
+              "parentUUID": "c156339f-d144-4ddb-aaf7-3adf954d3194",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e07ef481-5770-4523-b7d3-154c7aac3514",
+            "72318286-3fde-4ccc-a9b1-fb490d5baf0f",
+            "b06eff13-6c1e-42f4-a4b7-34c7fd7aff05",
+            "6d7650c9-7ed8-442e-890f-7838914b4994"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 86149,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}

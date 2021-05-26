@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\cypress",
+    "\\cypress\\fixtures",
+    "\\cypress\\integration",
+    "\\cypress\\integration\\examples",
+    "\\cypress\\integration\\pageObjects",
+    "\\cypress\\plugins",
+    "\\cypress\\support"
+  ],
+  "SelectedNode": "\\cypress\\integration\\pageObjects\\ShopPage.js",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,18 @@
+{
+  "jupitercloudurl": "https://jupiter.cloud.planittesting.com/",
+  "name": "John",
+  "surname": "Snow",
+  "email": "John.Snow@gmail.com",
+  "phonenumber": "0987654321",
+  "testmessage": "This is a test message.",
+  "welcomemessage": "We welcome your feedback - tell it how it is.",
+  "incompleteformmessage": "We welcome your feedback - but we won't get it unless you complete the form correctly.",
+  "fornamerequiredmessage": "Forename is required",
+  "emailrequiredmessage": "Email is required",
+  "messagerequired": "Message is required",
+  "appreciatefeedbackmessage": "Thanks John, we appreciate your feedback.",
+  "threeitemsinthecartmessage": "There are 3 items in your cart",
+  "stuffedfrogprice": "$10.99",
+  "fluffybunnyprice": "$9.99",
+  "valentinebearprice": "$14.99"
+}

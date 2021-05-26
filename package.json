@@ -1,0 +1,24 @@
+{
+  "name": "planitcodingchallenge",
+  "version": "1.0.0",
+  "description": "Framework for Testing 'https://jupiter.cloud.planittesting.com/' without BDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shriyansandy/PlanItCodingChallenge.git"
+  },
+  "author": "Sandeep Shriyan",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/shriyansandy/PlanItCodingChallenge#readme",
+  "devDependencies": {
+    "cypress": "^7.3.0",
+    "mocha": "^8.4.0",
+    "mochawesome": "^6.2.2"
+  }
+}

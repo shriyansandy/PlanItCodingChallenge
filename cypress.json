@@ -1,0 +1,10 @@
+{
+  "defaultCommandTimeout": 20000,
+  "waitForAnimations": false,
+  "animationDistanceThreshold": 50,
+  "env": {
+    "url": "https://jupiter.cloud.planittesting.com/"
+  },
+  "reporter": "mochawesome",
+  "projectId": ""
+}
